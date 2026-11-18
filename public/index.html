@@ -31,6 +31,7 @@
     <div class="sparkle sparkle-a" aria-hidden="true"></div>
     <div class="sparkle sparkle-b" aria-hidden="true"></div>
     <div class="sparkle sparkle-c" aria-hidden="true"></div>
+    <div id="burst-layer" class="burst-layer" aria-hidden="true"></div>
 
     <header class="topbar">
       <a class="brand" href="#top" aria-label="eatinpaincakes home">
@@ -47,7 +48,7 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
+        <div class="hero-copy reveal">
           <p class="eyebrow">meet Paincakes · build · break · learn</p>
           <h1 id="hero-title" class="sticker-text">eatinpaincakes</h1>
           <p class="lede">
@@ -59,222 +60,250 @@
             <a class="btn btn-primary" href="#projects">See her projects</a>
             <a class="btn btn-ghost" href="#donate">Donate</a>
           </div>
+          <p class="pet-hint">Tip: tap Paincakes for a little meow ♡</p>
         </div>
-        <div class="hero-visual">
-          <div class="mascot-orb">
+        <div class="hero-visual reveal">
+          <button
+            type="button"
+            class="mascot-orb"
+            id="pet-cat"
+            aria-label="Pet Paincakes"
+          >
             <img
               src="/assets/mascot-side.jpg"
               alt="Paincakes the doodle cat sitting on pixel pancakes"
             />
-          </div>
+            <span class="speech" id="cat-speech" hidden>nya~ build break learn ♡</span>
+          </button>
         </div>
       </section>
 
       <div class="motif-strip" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <button type="button" class="motif-btn" data-burst="heart" aria-label="spark heart"></button>
+        <button type="button" class="motif-btn" data-burst="star" aria-label="spark star"></button>
+        <button type="button" class="motif-btn" data-burst="heart" aria-label="spark heart"></button>
+        <button type="button" class="motif-btn" data-burst="pancake" aria-label="spark pancake"></button>
+        <button type="button" class="motif-btn" data-burst="heart" aria-label="spark heart"></button>
+        <button type="button" class="motif-btn" data-burst="star" aria-label="spark star"></button>
+        <button type="button" class="motif-btn" data-burst="heart" aria-label="spark heart"></button>
       </div>
 
       <section id="meet" class="section meet">
-        <div class="section-head">
-          <img
-            class="sticker-title"
-            src="/assets/title-controls.png"
-            alt="Controls"
-            width="699"
-            height="109"
-          />
-          <p class="eyebrow">the cat</p>
-          <h2 class="sticker-text sticker-text-sm">Paincakes is cooking with AI</h2>
-          <p>
-            She prompts, she crashes, she retries. Paincakes treats models like pancake batter —
-            messy, experimental, somehow delicious. This hub is her home base while
-            <strong>eatinpaincakes.com</strong> gets its domain later.
-          </p>
-        </div>
-        <div class="meet-stage">
-          <img class="meet-mascot" src="/assets/mascot-jump.jpg" alt="Paincakes jumping" />
-          <div class="play-card">
-            <h3 class="sticker-text sticker-text-xs">What she’s up to</h3>
-            <ul class="feature-list">
-              <li>Building little AI toys &amp; stories</li>
-              <li>Breaking things on purpose (sometimes)</li>
-              <li>Learning in public, soft chaos style</li>
-              <li>Shipping projects when the stack flips</li>
-            </ul>
+        <div class="shell">
+          <div class="section-head reveal">
+            <img
+              class="sticker-title"
+              src="/assets/title-controls.png"
+              alt="Controls"
+              width="699"
+              height="109"
+            />
+            <p class="eyebrow">the cat</p>
+            <h2 class="sticker-text sticker-text-sm">Paincakes is cooking with AI</h2>
+            <p>
+              She prompts, she crashes, she retries. Paincakes treats models like pancake batter —
+              messy, experimental, somehow delicious. This hub is her home base while
+              <strong>eatinpaincakes.com</strong> gets its domain later.
+            </p>
+          </div>
+          <div class="meet-stage reveal">
+            <img class="meet-mascot" src="/assets/mascot-jump.jpg" alt="Paincakes jumping" />
+            <div class="play-card">
+              <h3 class="sticker-text sticker-text-xs">What she’s up to</h3>
+              <ul class="feature-list">
+                <li>Building little AI toys &amp; stories</li>
+                <li>Breaking things on purpose (sometimes)</li>
+                <li>Learning in public, soft chaos style</li>
+                <li>Shipping projects when the stack flips</li>
+              </ul>
+              <div class="mood-row" role="group" aria-label="Pick a Paincakes mood">
+                <button type="button" class="mood-chip is-on" data-mood="building">building</button>
+                <button type="button" class="mood-chip" data-mood="breaking">breaking</button>
+                <button type="button" class="mood-chip" data-mood="learning">learning</button>
+              </div>
+              <p class="mood-line" id="mood-line">Mood: building — pancakes in the prompt oven.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="projects" class="section projects">
-        <div class="section-head">
-          <img
-            class="sticker-title sticker-title-tall"
-            src="/assets/title-secret-hints.png"
-            alt="Secret Hints"
-            width="470"
-            height="186"
-          />
-          <p class="eyebrow">projects portal</p>
-          <h2 class="sticker-text sticker-text-sm">Things Paincakes made</h2>
-          <p>
-            One featured drop for now — more games, experiments, and videos will stack here as she
-            keeps building.
-          </p>
-        </div>
-
-        <article class="project-feature">
-          <div class="project-banner">
+        <div class="shell">
+          <div class="section-head reveal">
             <img
-              src="/assets/gpu-cover.png"
-              alt="GPU Got Me Feeling cover art"
-              class="project-cover"
+              class="sticker-title sticker-title-tall"
+              src="/assets/title-secret-hints.png"
+              alt="Secret Hints"
+              width="470"
+              height="186"
             />
-            <span class="banner-chip">featured project</span>
-          </div>
-          <div class="project-body">
-            <p class="tagline">by Paincakes</p>
-            <h3 class="sticker-text sticker-text-xs">GPU Got Me Feeling</h3>
+            <p class="eyebrow">projects portal</p>
+            <h2 class="sticker-text sticker-text-sm">Things Paincakes made</h2>
             <p>
-              A kawaii stock-market dating sim parody — one of Paincakes’ projects, not the whole
-              brand. Buy the dip. Win his heart. Don’t get <em>OVERCLOCKED</em>. Free to play in the
-              browser on itch.io.
+              One featured drop for now — more games, experiments, and videos will stack here as she
+              keeps building.
             </p>
-            <div class="cta-row">
-              <a
-                class="btn btn-primary"
-                href="https://impaincakes.itch.io/gpu-got-me-feeling"
-                rel="noopener"
-                target="_blank"
-                >Play on itch.io</a
-              >
-              <a
-                class="btn btn-ghost"
-                href="https://impaincakes.itch.io/gpu-got-me-feeling"
-                rel="noopener"
-                target="_blank"
-                >Project page</a
-              >
-            </div>
           </div>
-        </article>
 
-        <div class="project-soon" aria-label="Coming soon projects">
-          <div class="soon-card">
-            <h3 class="sticker-text sticker-text-xs">More AI experiments</h3>
-            <p>Prompts, toys, and weird little demos — cooking next.</p>
+          <article class="project-feature reveal">
+            <div class="project-banner">
+              <img
+                src="/assets/gpu-cover.png"
+                alt="GPU Got Me Feeling cover art"
+                class="project-cover"
+              />
+              <span class="banner-chip">featured project</span>
+            </div>
+            <div class="project-body">
+              <p class="tagline">by Paincakes</p>
+              <h3 class="sticker-text sticker-text-xs">GPU Got Me Feeling</h3>
+              <p>
+                A kawaii stock-market dating sim parody — one of Paincakes’ projects, not the whole
+                brand. Buy the dip. Win his heart. Don’t get <em>OVERCLOCKED</em>. Free to play in the
+                browser on itch.io.
+              </p>
+              <div class="cta-row">
+                <a
+                  class="btn btn-primary"
+                  href="https://impaincakes.itch.io/gpu-got-me-feeling"
+                  rel="noopener"
+                  target="_blank"
+                  >Play on itch.io</a
+                >
+                <a
+                  class="btn btn-ghost"
+                  href="https://impaincakes.itch.io/gpu-got-me-feeling"
+                  rel="noopener"
+                  target="_blank"
+                  >Project page</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <div class="project-soon" aria-label="Coming soon projects">
+            <button type="button" class="soon-card reveal" data-hint="The next toy might involve talking pancakes. Maybe.">
+              <h3 class="sticker-text sticker-text-xs">More AI experiments</h3>
+              <p>Prompts, toys, and weird little demos — cooking next.</p>
+              <span class="tap-hint">tap for a secret hint</span>
+            </button>
+            <button type="button" class="soon-card reveal" data-hint="Clip idea: Paincakes rage-quits a model, then hugs it.">
+              <h3 class="sticker-text sticker-text-xs">Videos &amp; clips</h3>
+              <p>Build logs, breaks, and pancake-fueled learning moments.</p>
+              <span class="tap-hint">tap for a secret hint</span>
+            </button>
           </div>
-          <div class="soon-card">
-            <h3 class="sticker-text sticker-text-xs">Videos &amp; clips</h3>
-            <p>Build logs, breaks, and pancake-fueled learning moments.</p>
-          </div>
+          <p class="hint-toast" id="hint-toast" role="status" hidden></p>
         </div>
       </section>
 
       <section id="socials" class="section socials">
-        <div class="section-head">
-          <p class="eyebrow">socials</p>
-          <h2 class="sticker-text sticker-text-sm">Follow Paincakes</h2>
-          <p>Same cat energy across the feeds — watch her build, break, and learn in public.</p>
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="eyebrow">socials</p>
+            <h2 class="sticker-text sticker-text-sm">Follow Paincakes</h2>
+            <p>Same cat energy across the feeds — watch her build, break, and learn in public.</p>
+          </div>
+          <ul class="social-list reveal">
+            <li>
+              <a href="https://x.com/eatinpaincakes" rel="noopener" target="_blank">X / Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/eatinpaincakes" rel="noopener" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@eatinpaincakes" rel="noopener" target="_blank">TikTok</a>
+            </li>
+            <li>
+              <a href="https://youtube.com/@eatinpaincakes" rel="noopener" target="_blank">YouTube</a>
+            </li>
+            <li>
+              <a href="https://impaincakes.itch.io/gpu-got-me-feeling" rel="noopener" target="_blank"
+                >itch.io</a
+              >
+            </li>
+          </ul>
         </div>
-        <ul class="social-list">
-          <li>
-            <a href="https://x.com/eatinpaincakes" rel="noopener" target="_blank">X / Twitter</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/eatinpaincakes" rel="noopener" target="_blank"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a href="https://www.tiktok.com/@eatinpaincakes" rel="noopener" target="_blank">TikTok</a>
-          </li>
-          <li>
-            <a href="https://youtube.com/@eatinpaincakes" rel="noopener" target="_blank">YouTube</a>
-          </li>
-          <li>
-            <a href="https://impaincakes.itch.io/gpu-got-me-feeling" rel="noopener" target="_blank"
-              >itch.io</a
-            >
-          </li>
-        </ul>
       </section>
 
       <section id="donate" class="section donate">
-        <div class="donate-panel">
-          <div class="donate-head">
-            <img class="donate-mark" src="/assets/mascot-side.jpg" alt="" width="56" height="56" />
-            <div>
-              <h2 class="sticker-text sticker-text-sm">Keep Paincakes experimenting</h2>
-              <p>
-                Tips help the next build, break, and learn loop — more projects, more pancakes, more
-                soft chaos. Demo site for now.
+        <div class="shell">
+          <div class="donate-panel reveal">
+            <div class="donate-head">
+              <img class="donate-mark" src="/assets/mascot-side.jpg" alt="" width="56" height="56" />
+              <div>
+                <h2 class="sticker-text sticker-text-sm">Keep Paincakes experimenting</h2>
+                <p>
+                  Tips help the next build, break, and learn loop — more projects, more pancakes, more
+                  soft chaos. Demo site for now.
+                </p>
+              </div>
+            </div>
+
+            <div class="progress-block" aria-live="polite">
+              <p class="progress-label">
+                <strong id="raised-label">$128</strong> raised of
+                <strong id="goal-label">$500</strong> goal
               </p>
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="26"
+                id="progress-bar"
+              >
+                <div class="progress-fill" id="progress-fill" style="width: 25.6%"></div>
+              </div>
+              <p class="progress-note" id="progress-note">25.6% funded — demo sample totals</p>
             </div>
-          </div>
 
-          <div class="progress-block" aria-live="polite">
-            <p class="progress-label">
-              <strong id="raised-label">$128</strong> raised of
-              <strong id="goal-label">$500</strong> goal
+            <div class="amount-grid" role="group" aria-label="Donation amount">
+              <button type="button" class="amount-btn" data-cents="500">$5</button>
+              <button type="button" class="amount-btn is-selected" data-cents="1000">$10</button>
+              <button type="button" class="amount-btn" data-cents="2500">$25</button>
+              <button type="button" class="amount-btn" data-cents="5000">$50</button>
+              <button type="button" class="amount-btn" data-cents="10000">$100</button>
+            </div>
+
+            <label class="custom-amount">
+              <span>$ Other</span>
+              <input
+                id="custom-amount"
+                type="number"
+                min="1"
+                max="10000"
+                step="1"
+                placeholder="Custom"
+                inputmode="decimal"
+              />
+            </label>
+
+            <p class="giving-line">You’re giving <strong id="giving-label">$10</strong></p>
+
+            <button type="button" class="btn btn-primary btn-wide" id="stripe-donate">
+              Demo tip (Stripe soon)
+            </button>
+            <p class="pay-note">
+              Demo site for now — no live card checkout.<br />
+              Use Cash App below, or wait for Stripe later.
             </p>
-            <div
-              class="progress-track"
-              role="progressbar"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              aria-valuenow="26"
-              id="progress-bar"
+
+            <a
+              class="btn btn-cashapp btn-wide"
+              id="cashapp-link"
+              href="https://cash.app/$eatinpaincakes"
+              rel="noopener"
+              target="_blank"
             >
-              <div class="progress-fill" id="progress-fill" style="width: 25.6%"></div>
-            </div>
-            <p class="progress-note" id="progress-note">
-              25.6% funded — demo sample totals
-            </p>
+              Pay with Cash App $eatinpaincakes
+            </a>
+
+            <p class="status-line" id="donate-status" role="status"></p>
+            <p class="thanks-line" id="thanks-line" hidden>Thank you — Paincakes just leveled up.</p>
           </div>
-
-          <div class="amount-grid" role="group" aria-label="Donation amount">
-            <button type="button" class="amount-btn" data-cents="500">$5</button>
-            <button type="button" class="amount-btn is-selected" data-cents="1000">$10</button>
-            <button type="button" class="amount-btn" data-cents="2500">$25</button>
-            <button type="button" class="amount-btn" data-cents="5000">$50</button>
-            <button type="button" class="amount-btn" data-cents="10000">$100</button>
-          </div>
-
-          <label class="custom-amount">
-            <span>$ Other</span>
-            <input
-              id="custom-amount"
-              type="number"
-              min="1"
-              max="10000"
-              step="1"
-              placeholder="Custom"
-              inputmode="decimal"
-            />
-          </label>
-
-          <p class="giving-line">You’re giving <strong id="giving-label">$10</strong></p>
-
-          <button type="button" class="btn btn-primary btn-wide" id="stripe-donate">
-            Demo tip (Stripe soon)
-          </button>
-          <p class="pay-note">
-            Demo site for now — no live card checkout.<br />
-            Use Cash App below, or wait for Stripe later.
-          </p>
-
-          <a
-            class="btn btn-cashapp btn-wide"
-            id="cashapp-link"
-            href="https://cash.app/$eatinpaincakes"
-            rel="noopener"
-            target="_blank"
-          >
-            Pay with Cash App $eatinpaincakes
-          </a>
-
-          <p class="status-line" id="donate-status" role="status"></p>
-          <p class="thanks-line" id="thanks-line" hidden>Thank you — Paincakes just leveled up.</p>
         </div>
       </section>
     </main>
