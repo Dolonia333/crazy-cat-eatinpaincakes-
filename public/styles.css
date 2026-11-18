@@ -379,11 +379,22 @@ h3 {
 }
 
 .pet-hint {
-  margin: 0.9rem 0 0.35rem;
+  margin: 0.9rem 0 0;
   font-family: var(--font-pixel);
   color: var(--ink-muted);
   font-size: 0.95rem;
   letter-spacing: 0.02em;
+}
+
+.hero-copy {
+  /* Room under tip CTAs + pet hint so they don’t crowd the motif strip */
+  padding-bottom: 1.35rem;
+}
+
+.hero .cta-row {
+  margin-bottom: 0.15rem;
+  /* Clear chunky button drop-shadows */
+  padding-bottom: 0.35rem;
 }
 
 .meet-itch {
@@ -1024,10 +1035,12 @@ h3 {
     min-height: auto;
     text-align: center;
     gap: 1.1rem;
+    padding-bottom: clamp(2.75rem, 8vw, 3.75rem);
   }
 
   .hero-copy {
     order: 2;
+    margin-bottom: 0.5rem;
   }
 
   .hero-visual {
