@@ -1,12 +1,12 @@
 :root {
   --bg: #ffd6e4;
   --bg-deep: #ffc5d8;
-  --panel: rgba(255, 246, 250, 0.94);
-  --panel-solid: #fff6fa;
-  --ink: #4a2a35;
-  --ink-muted: rgba(74, 42, 53, 0.72);
-  --heading: #7a4a92;
-  --link: #e8547c;
+  --panel: rgba(255, 250, 252, 0.96);
+  --panel-solid: #fffafc;
+  --ink: #2f1520;
+  --ink-muted: #5a3140;
+  --heading: #5c2d78;
+  --link: #d12f5c;
   --border: #f6b2d0;
   --border-strong: #e89bb8;
   --button: #ff5e8a;
@@ -47,12 +47,14 @@ body {
   font-family: var(--font-body);
   font-weight: 600;
   line-height: 1.55;
-  /* One soft pink page with individually cropped cats, pancakes, hearts & stars */
+  /* Soft pink page — motifs stay faint so copy stays readable */
   background-color: rgb(252, 221, 229);
-  background-image: url("/assets/bg-scattered.jpg");
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  background-position: center top;
+  background-image:
+    linear-gradient(180deg, rgba(255, 248, 251, 0.72) 0%, rgba(255, 246, 250, 0.55) 40%, rgba(255, 248, 251, 0.7) 100%),
+    url("/assets/bg-scattered.jpg");
+  background-repeat: no-repeat, repeat-y;
+  background-size: 100% 100%, 100% auto;
+  background-position: center top, center top;
   overflow-x: hidden;
 }
 
@@ -70,7 +72,7 @@ body {
   width: clamp(28px, 4.5vw, 72px);
   height: auto;
   image-rendering: pixelated;
-  opacity: 0.9;
+  opacity: 0.45;
   animation: sticker-float 7s ease-in-out infinite;
 }
 
@@ -85,8 +87,18 @@ body {
 @media (max-width: 720px) {
   .sticker-field img {
     width: clamp(22px, 9vw, 44px);
-    opacity: 0.75;
+    opacity: 0.35;
   }
+}
+
+/* Soft cream wash behind copy so text pops on the pink page */
+.hero-copy,
+.section-head {
+  padding: 0.85rem 1rem 1rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 252, 253, 0.88);
+  box-shadow: 0 10px 28px rgba(91, 26, 110, 0.06);
+  backdrop-filter: blur(6px);
 }
 
 a {
@@ -166,9 +178,9 @@ main,
   justify-content: space-between;
   gap: 0.75rem;
   padding: 0.75rem clamp(0.85rem, 4vw, 2.25rem);
-  background: rgba(255, 246, 250, 0.82);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(246, 178, 208, 0.55);
+  background: rgba(255, 252, 253, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(246, 178, 208, 0.65);
 }
 
 .brand {
@@ -207,13 +219,14 @@ main,
   letter-spacing: 0.02em;
   line-height: 1.15;
   color: transparent;
-  background: linear-gradient(180deg, var(--sticker-pink-top) 0%, var(--sticker-pink-bot) 100%);
+  background: linear-gradient(180deg, #ffe4f0 0%, #ff6a9e 55%, #f0457e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   filter:
-    drop-shadow(0 0 0.5px var(--sticker-outline))
-    drop-shadow(0 0 1px var(--sticker-outline))
-    drop-shadow(0 0 1.5px var(--sticker-outline))
+    drop-shadow(0 0 0.6px #fff)
+    drop-shadow(0 0 1.2px #fff)
+    drop-shadow(0 0 2px #fff)
+    drop-shadow(0 0 2.5px #fff)
     drop-shadow(2px 3px 0 var(--sticker-shadow));
 }
 
@@ -307,8 +320,8 @@ main,
 .eyebrow {
   margin: 0 0 0.7rem;
   font-family: var(--font-pixel);
-  font-size: 1.02rem;
-  color: var(--ink-muted);
+  font-size: 1.05rem;
+  color: var(--ink);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -347,10 +360,10 @@ h3 {
 .lede {
   max-width: 36rem;
   font-family: var(--font-pixel);
-  font-size: clamp(1.08rem, 2vw, 1.28rem);
-  font-weight: 500;
+  font-size: clamp(1.12rem, 2.1vw, 1.32rem);
+  font-weight: 600;
   letter-spacing: 0.01em;
-  line-height: 1.55;
+  line-height: 1.6;
   margin: 0 0 1.25rem;
   color: var(--ink);
 }
@@ -577,11 +590,11 @@ h3 {
 .section-head p {
   margin: 0.4rem 0 0;
   font-family: var(--font-pixel);
-  color: var(--ink-muted);
-  font-size: 1.08rem;
-  font-weight: 500;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 600;
   letter-spacing: 0.01em;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .meet-stage,
@@ -606,7 +619,7 @@ h3 {
 .play-card,
 .project-feature,
 .donate-panel {
-  background: var(--panel);
+  background: rgba(255, 252, 253, 0.97);
   border: 2px solid var(--border);
   border-radius: calc(var(--radius) + 4px);
   box-shadow: var(--shadow);
@@ -726,7 +739,9 @@ h3 {
 
 .project-body p {
   margin: 0 0 1rem;
-  color: var(--ink-muted);
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 .project-soon {
