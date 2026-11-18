@@ -25,5 +25,5 @@ app.use((_req, res) => {
 });
 
 app.listen(port, "0.0.0.0", () => {
-  console.log(`eatinpaincakes demo hub on http://127.0.0.1:${port}`);
+  console.log(`Paincakes demo hub on http://127.0.0.1:${port}`);
 });
