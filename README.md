@@ -1,6 +1,8 @@
-# eatinpaincakes
+# eatinpaincakes (demo)
 
-Brand hub for **eatinpaincakes** — doodle cat, pixel pancakes, soft chaos.
+Brand hub demo for **eatinpaincakes** — doodle cat, pixel pancakes, soft chaos.
+
+Inspired by [GPU Got Me Feeling](https://impaincakes.itch.io/gpu-got-me-feeling).
 
 ## Run locally
 
@@ -11,15 +13,8 @@ npm start
 
 Open `http://127.0.0.1:3847`.
 
-## Env
-
-Copy `.env.example` → `.env` for local overrides. Published Cursor apps should set secrets via Cursor (not a committed `.env`):
-
-- `STRIPE_SECRET_KEY`
-- `STRIPE_PUBLISHABLE_KEY`
-- `CASHAPP_HANDLE` (default `eatinpaincakes`)
-- optional `CAMPAIGN_GOAL_CENTS` / `CAMPAIGN_RAISED_CENTS`
+Only the `public/` folder is served on the web. Donate is demo-only (Cash App link + sample totals); Stripe is not wired yet.
 
 ## Sections
 
-Hero · Play (GPU Got Me Feeling) · Projects · Socials · Donate (Stripe Checkout + Cash App)
+Hero · Play · Projects · Socials · Donate (demo)

@@ -2,7 +2,7 @@
   "name": "eatinpaincakes",
   "version": "1.0.0",
   "private": true,
-  "description": "eatinpaincakes brand hub — play, projects, socials, donate",
+  "description": "eatinpaincakes brand hub demo — play, projects, socials, donate (demo)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,8 +12,6 @@
     "node": ">=18"
   },
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "stripe": "^17.7.0"
+    "express": "^4.21.2"
   }
 }
