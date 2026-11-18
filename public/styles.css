@@ -45,15 +45,12 @@ body {
   font-family: var(--font-body);
   font-weight: 600;
   line-height: 1.55;
-  background-color: #fddce6;
-  background-image:
-    linear-gradient(180deg, rgba(253, 220, 230, 0.55) 0%, rgba(253, 220, 230, 0.12) 40%, rgba(253, 220, 230, 0.42) 100%),
-    url("/assets/banner-pixel.jpg"),
-    url("/assets/bg-pixel-tile.jpg");
-  background-repeat: no-repeat, repeat-x, repeat;
-  background-size: 100% 100%, min(1180px, 145vw) auto, 1040px auto;
-  background-position: center top, center top, center 460px;
-  background-attachment: scroll;
+  /* One soft pink website background with cats/pancakes/hearts scattered evenly */
+  background-color: #fcdbe6;
+  background-image: url("/assets/bg-pixel-tile.jpg");
+  background-repeat: repeat;
+  background-size: 720px auto;
+  background-position: center top;
   overflow-x: hidden;
 }
 
@@ -450,12 +447,7 @@ h3 {
   gap: 0.85rem;
   padding: 0.7rem 1rem;
   border-block: 2px solid rgba(246, 178, 208, 0.65);
-  background:
-    linear-gradient(90deg, rgba(253, 220, 230, 0.25), rgba(255, 246, 250, 0.75), rgba(253, 220, 230, 0.25)),
-    url("/assets/banner-pixel.jpg");
-  background-size: auto, 900px auto;
-  background-position: center, 40% 55%;
-  background-repeat: no-repeat, no-repeat;
+  background: rgba(255, 246, 250, 0.72);
 }
 
 .motif-btn {
