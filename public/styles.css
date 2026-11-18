@@ -45,40 +45,44 @@ body {
   font-family: var(--font-body);
   font-weight: 600;
   line-height: 1.55;
-  /* One soft pink website canvas (banner pink). Cats sit on the right only. */
-  background: rgb(252, 221, 229);
+  /* One soft pink page with individually cropped cats, pancakes, hearts & stars */
+  background-color: rgb(252, 221, 229);
+  background-image: url("/assets/bg-scattered.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center top;
   overflow-x: hidden;
 }
 
-/* Continuous pink plate behind everything */
-body::before {
-  content: "";
+/* Extra individual stickers floating around the page (not one corner clump) */
+.sticker-field {
   position: fixed;
   inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background: rgb(252, 221, 229);
-}
-
-/* Single motif cluster on the right — not a repeating tile */
-body::after {
-  content: "";
-  position: fixed;
-  top: max(0px, env(safe-area-inset-top));
-  right: 0;
-  width: min(520px, 42vw);
-  aspect-ratio: 1107 / 675;
-  max-height: 46vh;
   z-index: -1;
   pointer-events: none;
-  background: url("/assets/bg-motif-side.png") right top / contain no-repeat;
-  opacity: 0.92;
+  overflow: hidden;
+}
+
+.sticker-field img {
+  position: absolute;
+  width: clamp(28px, 4.5vw, 72px);
+  height: auto;
+  image-rendering: pixelated;
+  opacity: 0.9;
+  animation: sticker-float 7s ease-in-out infinite;
+}
+
+.sticker-field img:nth-child(odd) { animation-duration: 8.5s; }
+.sticker-field img:nth-child(3n) { animation-duration: 6.2s; animation-direction: reverse; }
+
+@keyframes sticker-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(4deg); }
 }
 
 @media (max-width: 720px) {
-  body::after {
-    width: min(260px, 68vw);
-    max-height: 28vh;
+  .sticker-field img {
+    width: clamp(22px, 9vw, 44px);
     opacity: 0.75;
   }
 }
