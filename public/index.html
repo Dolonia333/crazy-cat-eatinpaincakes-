@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mochiy+Pop+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Cherry+Bomb+One&family=Mochiy+Pop+One&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
@@ -35,7 +35,7 @@
     <header class="topbar">
       <a class="brand" href="#top" aria-label="eatinpaincakes home">
         <img class="brand-mark" src="/assets/mascot-side.jpg" alt="" width="40" height="40" />
-        <span class="brand-name">eatinpaincakes</span>
+        <span class="brand-name sticker-text">eatinpaincakes</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#meet">Meet</a>
@@ -49,7 +49,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">meet Paincakes · build · break · learn</p>
-          <h1 id="hero-title">eatinpaincakes</h1>
+          <h1 id="hero-title" class="sticker-text">eatinpaincakes</h1>
           <p class="lede">
             Home of <strong>Paincakes</strong> — a doodle cat who’s building, breaking, and learning
             AI one sticky experiment at a time. Soft pink chaos, pancakes forever, and a growing stack
@@ -76,8 +76,15 @@
 
       <section id="meet" class="section meet">
         <div class="section-head">
+          <img
+            class="sticker-title"
+            src="/assets/title-controls.png"
+            alt="Controls"
+            width="699"
+            height="109"
+          />
           <p class="eyebrow">the cat</p>
-          <h2>Paincakes is cooking with AI</h2>
+          <h2 class="sticker-text sticker-text-sm">Paincakes is cooking with AI</h2>
           <p>
             She prompts, she crashes, she retries. Paincakes treats models like pancake batter —
             messy, experimental, somehow delicious. This hub is her home base while
@@ -87,7 +94,7 @@
         <div class="meet-stage">
           <img class="meet-mascot" src="/assets/mascot-jump.jpg" alt="Paincakes jumping" />
           <div class="play-card">
-            <h3>What she’s up to</h3>
+            <h3 class="sticker-text sticker-text-xs">What she’s up to</h3>
             <ul class="feature-list">
               <li>Building little AI toys &amp; stories</li>
               <li>Breaking things on purpose (sometimes)</li>
@@ -100,8 +107,15 @@
 
       <section id="projects" class="section projects">
         <div class="section-head">
+          <img
+            class="sticker-title sticker-title-tall"
+            src="/assets/title-secret-hints.png"
+            alt="Secret Hints"
+            width="470"
+            height="186"
+          />
           <p class="eyebrow">projects portal</p>
-          <h2>Things Paincakes made</h2>
+          <h2 class="sticker-text sticker-text-sm">Things Paincakes made</h2>
           <p>
             One featured drop for now — more games, experiments, and videos will stack here as she
             keeps building.
@@ -119,7 +133,7 @@
           </div>
           <div class="project-body">
             <p class="tagline">by Paincakes</p>
-            <h3>GPU Got Me Feeling</h3>
+            <h3 class="sticker-text sticker-text-xs">GPU Got Me Feeling</h3>
             <p>
               A kawaii stock-market dating sim parody — one of Paincakes’ projects, not the whole
               brand. Buy the dip. Win his heart. Don’t get <em>OVERCLOCKED</em>. Free to play in the
@@ -146,11 +160,11 @@
 
         <div class="project-soon" aria-label="Coming soon projects">
           <div class="soon-card">
-            <h3>More AI experiments</h3>
+            <h3 class="sticker-text sticker-text-xs">More AI experiments</h3>
             <p>Prompts, toys, and weird little demos — cooking next.</p>
           </div>
           <div class="soon-card">
-            <h3>Videos &amp; clips</h3>
+            <h3 class="sticker-text sticker-text-xs">Videos &amp; clips</h3>
             <p>Build logs, breaks, and pancake-fueled learning moments.</p>
           </div>
         </div>
@@ -159,7 +173,7 @@
       <section id="socials" class="section socials">
         <div class="section-head">
           <p class="eyebrow">socials</p>
-          <h2>Follow Paincakes</h2>
+          <h2 class="sticker-text sticker-text-sm">Follow Paincakes</h2>
           <p>Same cat energy across the feeds — watch her build, break, and learn in public.</p>
         </div>
         <ul class="social-list">
@@ -190,7 +204,7 @@
           <div class="donate-head">
             <img class="donate-mark" src="/assets/mascot-side.jpg" alt="" width="56" height="56" />
             <div>
-              <h2>Keep Paincakes experimenting</h2>
+              <h2 class="sticker-text sticker-text-sm">Keep Paincakes experimenting</h2>
               <p>
                 Tips help the next build, break, and learn loop — more projects, more pancakes, more
                 soft chaos. Demo site for now.
@@ -266,10 +280,18 @@
     </main>
 
     <footer class="footer">
+      <img
+        class="sticker-title sticker-title-credits"
+        src="/assets/title-credits.png"
+        alt="Credits"
+        width="607"
+        height="93"
+      />
       <p>
         © <span id="year"></span> eatinpaincakes · Paincakes forever ·
         <span class="footer-domain">eatinpaincakes.com coming later</span>
       </p>
+      <p class="credits-note">Art direction vibes · sticker titles · soft chaos forever</p>
     </footer>
 
     <script src="/script.js" defer></script>

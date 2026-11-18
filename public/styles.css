@@ -13,7 +13,13 @@
   --button-fg: #ffffff;
   --soft: #e6dde1;
   --cash: #00c244;
+  --sticker-pink-top: #ffd6e8;
+  --sticker-pink-bot: #ff7eb0;
+  --sticker-lavender: #e3c7ff;
+  --sticker-outline: #ffffff;
+  --sticker-shadow: #5b1a6e;
   --font-display: "Mochiy Pop One", "Baloo 2", sans-serif;
+  --font-sticker: "Cherry Bomb One", "Mochiy Pop One", "Baloo 2", sans-serif;
   --font-body: "Baloo 2", "Trebuchet MS", sans-serif;
   --radius: 16px;
   --shadow: 0 10px 28px rgba(232, 71, 115, 0.12);
@@ -108,10 +114,51 @@ main,
 }
 
 .brand-name {
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 2.2vw, 1.2rem);
-  color: var(--heading);
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
   letter-spacing: 0.01em;
+}
+
+/* Bubbly sticker titles — matches CONTROLS / SECRET HINTS / CREDITS art */
+.sticker-text {
+  font-family: var(--font-sticker);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: transparent;
+  background: linear-gradient(180deg, var(--sticker-pink-top) 0%, var(--sticker-pink-bot) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0;
+  filter:
+    drop-shadow(0 0 0.5px var(--sticker-outline))
+    drop-shadow(0 0 1px var(--sticker-outline))
+    drop-shadow(0 0 1.5px var(--sticker-outline))
+    drop-shadow(2px 3px 0 var(--sticker-shadow));
+}
+
+.sticker-text-sm {
+  font-size: clamp(1.15rem, 2.8vw, 1.7rem);
+}
+
+.sticker-text-xs {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+}
+
+.sticker-title {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 0 0.85rem;
+  filter: drop-shadow(0 6px 10px rgba(91, 26, 110, 0.18));
+}
+
+.sticker-title-tall {
+  width: min(100%, 280px);
+}
+
+.sticker-title-credits {
+  width: min(100%, 260px);
+  margin: 0 auto 0.85rem;
 }
 
 .nav {
@@ -170,14 +217,19 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(1.7rem, 4.6vw, 3rem);
+  font-size: clamp(1.85rem, 5vw, 3.1rem);
   margin-bottom: 0.9rem;
-  text-shadow: 0 3px 0 rgba(255, 94, 138, 0.18);
 }
 
 h2 {
   font-size: clamp(1.25rem, 2.6vw, 1.75rem);
   margin-bottom: 0.65rem;
+}
+
+h1.sticker-text,
+h2.sticker-text,
+h3.sticker-text {
+  color: transparent;
 }
 
 h3 {
@@ -634,6 +686,11 @@ h3 {
   padding: 1.5rem 1rem 2.5rem;
   text-align: center;
   color: var(--ink-muted);
+}
+
+.credits-note {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 900px) {
