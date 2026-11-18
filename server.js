@@ -7,6 +7,10 @@ const app = express();
 const publicDir = path.join(__dirname, "public");
 const port = Number(process.env.PORT || 3847);
 
+app.get("/", (_req, res) => {
+  res.sendFile(path.join(publicDir, "index.html"));
+});
+
 // Demo hub: only files under public/ are web-accessible.
 app.use(
   express.static(publicDir, {
@@ -15,10 +19,6 @@ app.use(
     dotfiles: "deny",
   })
 );
-
-app.get("/", (_req, res) => {
-  res.sendFile(path.join(publicDir, "index.html"));
-});
 
 app.use((_req, res) => {
   res.status(404).type("text/plain").send("Not found");
