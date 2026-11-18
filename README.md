@@ -1,8 +1,8 @@
 # eatinpaincakes (demo)
 
-Brand hub demo for **eatinpaincakes** — doodle cat, pixel pancakes, soft chaos.
+Brand hub demo for **Paincakes** / **eatinpaincakes** — a doodle cat building, breaking, and learning AI.
 
-Inspired by [GPU Got Me Feeling](https://impaincakes.itch.io/gpu-got-me-feeling).
+[GPU Got Me Feeling](https://impaincakes.itch.io/gpu-got-me-feeling) is one featured project in the portal, not the whole brand. Canonical domain later: `eatinpaincakes.com`.
 
 ## Run locally
 

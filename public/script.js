@@ -88,7 +88,7 @@
         return;
       }
       setStatus(
-        `Demo mode — Stripe isn’t live yet. You’re previewing ${money(selectedCents)}. Use Cash App below, or come back when payments are wired.`
+        `Demo mode — Stripe isn’t live yet. You’re previewing ${money(selectedCents)} for Paincakes. Use Cash App below, or come back when payments are wired.`
       );
       if (thanksLine) thanksLine.hidden = false;
     });
