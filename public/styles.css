@@ -177,10 +177,12 @@ main,
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.75rem clamp(0.85rem, 4vw, 2.25rem);
+  /* Extra bottom pad so the tip button’s chunky shadow doesn’t sit on the bar edge */
+  padding: 0.75rem clamp(0.85rem, 4vw, 2.25rem) 1.05rem;
   background: rgba(255, 252, 253, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 2px solid rgba(246, 178, 208, 0.65);
+  overflow: visible;
 }
 
 .brand {
@@ -299,9 +301,11 @@ main,
   background: linear-gradient(180deg, #ff8aab 0%, var(--button) 55%, #f24d7c 100%) !important;
   color: var(--button-fg) !important;
   text-shadow: 0 2px 0 var(--button-shadow);
+  /* Shallower shadow so tip doesn’t collide with the topbar bottom edge */
   box-shadow:
-    0 4px 0 var(--button-shadow),
-    0 6px 0 rgba(91, 26, 110, 0.18) !important;
+    0 3px 0 var(--button-shadow),
+    0 4px 0 rgba(91, 26, 110, 0.14) !important;
+  margin-bottom: 2px;
 }
 
 .nav-donate:hover {
@@ -314,7 +318,7 @@ main,
   gap: clamp(1.25rem, 4vw, 2.75rem);
   align-items: center;
   min-height: min(86svh, 820px);
-  padding: clamp(1rem, 3vw, 1.75rem) clamp(1rem, 5vw, 3.25rem) clamp(1.75rem, 4vw, 2.75rem);
+  padding: clamp(1rem, 3vw, 1.75rem) clamp(1rem, 5vw, 3.25rem) clamp(2.25rem, 5vw, 3.25rem);
 }
 
 .eyebrow {
@@ -375,11 +379,15 @@ h3 {
 }
 
 .pet-hint {
-  margin: 0.9rem 0 0;
+  margin: 0.9rem 0 0.35rem;
   font-family: var(--font-pixel);
   color: var(--ink-muted);
   font-size: 0.95rem;
   letter-spacing: 0.02em;
+}
+
+.meet-itch {
+  margin-top: 0.35rem;
 }
 
 .cta-row {
