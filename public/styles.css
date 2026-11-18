@@ -45,13 +45,42 @@ body {
   font-family: var(--font-body);
   font-weight: 600;
   line-height: 1.55;
-  /* One soft pink website background with cats/pancakes/hearts scattered evenly */
-  background-color: #fcdbe6;
-  background-image: url("/assets/bg-pixel-tile.jpg");
-  background-repeat: repeat;
-  background-size: 560px auto;
-  background-position: center top;
+  /* One soft pink website canvas (banner pink). Cats sit on the right only. */
+  background: rgb(252, 221, 229);
   overflow-x: hidden;
+}
+
+/* Continuous pink plate behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: rgb(252, 221, 229);
+}
+
+/* Single motif cluster on the right — not a repeating tile */
+body::after {
+  content: "";
+  position: fixed;
+  top: max(0px, env(safe-area-inset-top));
+  right: 0;
+  width: min(520px, 42vw);
+  aspect-ratio: 1107 / 675;
+  max-height: 46vh;
+  z-index: -1;
+  pointer-events: none;
+  background: url("/assets/bg-motif-side.png") right top / contain no-repeat;
+  opacity: 0.92;
+}
+
+@media (max-width: 720px) {
+  body::after {
+    width: min(260px, 68vw);
+    max-height: 28vh;
+    opacity: 0.75;
+  }
 }
 
 a {
