@@ -49,7 +49,7 @@ body {
   background-color: #fcdbe6;
   background-image: url("/assets/bg-pixel-tile.jpg");
   background-repeat: repeat;
-  background-size: 720px auto;
+  background-size: 560px auto;
   background-position: center top;
   overflow-x: hidden;
 }
