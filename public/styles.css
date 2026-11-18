@@ -22,6 +22,8 @@
   --font-display: "Mochiy Pop One", "Baloo 2", sans-serif;
   --font-sticker: "Cherry Bomb One", "Mochiy Pop One", "Baloo 2", sans-serif;
   --font-body: "Baloo 2", "Trebuchet MS", sans-serif;
+  /* Soft pixel face for plain UI copy (not the big sticker titles) */
+  --font-pixel: "Pixelify Sans", "Baloo 2", sans-serif;
   --radius: 18px;
   --shadow: 0 10px 28px rgba(232, 71, 115, 0.12);
   --shell: 1080px;
@@ -259,8 +261,10 @@ main,
 .nav a {
   text-decoration: none;
   color: var(--ink);
-  font-weight: 800;
-  font-size: 0.95rem;
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
   white-space: nowrap;
   min-height: var(--tap);
   display: inline-flex;
@@ -302,10 +306,11 @@ main,
 
 .eyebrow {
   margin: 0 0 0.7rem;
-  font-size: 0.98rem;
+  font-family: var(--font-pixel);
+  font-size: 1.02rem;
   color: var(--ink-muted);
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 h1,
@@ -341,7 +346,11 @@ h3 {
 
 .lede {
   max-width: 36rem;
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-family: var(--font-pixel);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.55;
   margin: 0 0 1.25rem;
   color: var(--ink);
 }
@@ -354,8 +363,10 @@ h3 {
 
 .pet-hint {
   margin: 0.9rem 0 0;
+  font-family: var(--font-pixel);
   color: var(--ink-muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
 }
 
 .cta-row {
@@ -565,8 +576,12 @@ h3 {
 
 .section-head p {
   margin: 0.4rem 0 0;
+  font-family: var(--font-pixel);
   color: var(--ink-muted);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.55;
 }
 
 .meet-stage,
@@ -640,15 +655,20 @@ h3 {
 
 .mood-line {
   margin: 0;
+  font-family: var(--font-pixel);
   color: var(--heading);
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   min-height: 1.4rem;
 }
 
 .feature-list {
   margin: 0;
   padding-left: 1.15rem;
+  font-family: var(--font-pixel);
   color: var(--ink);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .feature-list li {
@@ -657,8 +677,10 @@ h3 {
 
 .tagline {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-family: var(--font-pixel);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   color: var(--link);
 }
 
@@ -773,13 +795,15 @@ h3 {
   justify-content: center;
   min-height: var(--tap);
   padding: 0.7rem 1rem;
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--ink);
   background: var(--panel-solid);
   border: 2px solid var(--border);
   border-radius: 14px;
   box-shadow: 0 4px 0 rgba(246, 178, 208, 0.55);
-  font-weight: 800;
   transition: transform 0.12s ease, background 0.12s ease;
 }
 
@@ -840,8 +864,10 @@ h3 {
 
 .progress-note {
   margin: 0.45rem 0 0;
-  font-size: 0.95rem;
+  font-family: var(--font-pixel);
+  font-size: 0.98rem;
   color: var(--ink-muted);
+  letter-spacing: 0.01em;
 }
 
 .amount-grid {
@@ -911,8 +937,10 @@ h3 {
 
 .pay-note {
   margin: 0.55rem 0 0;
+  font-family: var(--font-pixel);
   color: var(--ink-muted);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
 }
 
 .status-line {
@@ -939,7 +967,21 @@ h3 {
 
 .credits-note {
   margin: 0.35rem 0 0;
-  font-size: 0.9rem;
+  font-family: var(--font-pixel);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+.giving-line,
+.progress-label,
+.project-body > p,
+.soon-card p,
+.tap-hint,
+.donate-head p,
+.footer p,
+.status-line,
+.thanks-line {
+  font-family: var(--font-pixel);
 }
 
 .reveal {
